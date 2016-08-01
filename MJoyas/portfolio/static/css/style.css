@@ -1,0 +1,111 @@
+.nav_bar {
+	margin: 50px 60px 50px 50px;
+	padding: 20px 20px 20px 20px; 
+	float: right; 
+	animation: fadein 1.5s 1;
+}
+
+.nav_link, .nav_link:link, .nav_link:visited  {
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	text-decoration: none;
+	font-size: 16px;
+	color: #8c8c8c;
+	padding: 20px 20px 20px 20px;
+}
+
+.nav_link:hover {
+	text-decoration: none;
+	color: black;
+	animation: colorhover 1s 1;
+}
+
+.logo {
+	display: block;
+	float: left;
+	margin: 15px 15px 15px 15px;
+	width: 25%;
+	animation: fadein 1.5s 1;
+
+}
+
+
+@keyframes colorhover {
+	from {color: #8c8c8c;}
+	to {color: black;}
+}
+
+.header {
+	text-align: right; 
+	float: right; 
+	margin: 90px 20px 0px 10px; 
+	font-size: 20px; 
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; 
+	color: black; 
+}
+
+.container { 	
+	clear: both;	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.container img {
+	margin: 10px 10px 10px 10px;
+	display: inline-block;
+	max-width: 100%;
+}
+
+
+@keyframes opacify {
+	50% {opacity: 0;}
+}
+
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+.brands {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display: block;
+	margin: 20px 30px 30px 30px; 
+	padding: 20px 20px 20px 20px;
+	float: left;
+	width: auto;
+	height: auto;
+	overflow: auto;
+    clear: both;
+    font-size: 16px;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; 
+	color: #8c8c8c;
+
+}
+
+.brand_descriptions {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+	display: inline-block;
+	margin: 20px 30px 30px 0px;
+	padding: 20px 20px 20px 20px;
+	width: auto;
+	height: auto;
+	overflow: auto;
+	font-size: 18px;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; 
+	color: #8c8c8c;
+}
+
+.button {
+	background-color: white;
+	border: none;
+	color: #8c8c8c;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; 
+
+}
+
+.button:hover {
+	animation: colorhover 1s 1;
+}

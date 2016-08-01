@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>
+			{% block title %} 
+				Marianne Joyas 
+			{% endblock %}
+		</title>
+
+		<link rel="stylesheet" type="text/css" href=" {% static 'css/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="http://www.w3schools.com/lib/w3.css">
+	</head>
+	
+	<body>
+	
+		<header>
+			<nav>
+				<div class = "nav_bar">
+					<a class = "nav_link" href="{% url 'products' %}">Products</a>
+					<a class = "nav_link" href="{% url 'us' %}">Us</a>
+					<a class = "nav_link" href="{% url 'contact' %}">Contact</a>
+				</div>
+				
+				<div class = "logo">
+					<a href="{% url 'home' %}"><img style = "width: 100%" src="{% static 'images/Logo_MJoyas.jpg' %}"></a>				
+				</div>
+			</nav>
+		</header>
+		
+		{% block content %}{% endblock %}
+		
+		<footer style = "clear:both;">
+			<div>
+				<img style = "display: block; margin: 20px auto 20px auto;" src="{% static 'images/Logo_MJoyas_footer.jpg' %}"/>
+			</div>
+			
+			<div style = "display: block; margin: 20px auto 20px auto; text-align:center; font-size: 15px; font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; color: #8c8c8c;">
+				©2016 GTech Design, All rights reserved
+			</div>
+
+			<!--IMPORTANT!
+			Don't forget to add social media div!-->
+		</footer>	
+	
+	</body>
+
+</html>

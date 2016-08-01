@@ -1,0 +1,16 @@
+{% extends 'layouts/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+	Products - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+	<div class= "brand_descriptions">
+		{% for brand in brand_text %}
+			<p>{{ brand.description }}</p>
+		{% endfor %}
+	</div>
+
+{% endblock %}
+
