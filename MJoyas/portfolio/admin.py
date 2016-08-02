@@ -9,13 +9,7 @@ admin.site.register(models.HomeHeader, HeaderAdmin)
 
 class BrandAdmin(admin.ModelAdmin):
 	model = models.Brand
-	list_display = ('brand_name', 'slug',)
+	list_display = ('brand_name',)
 	prepopulated_fields = {'slug' : ('brand_name',)}
 
 admin.site.register(models.Brand, BrandAdmin)
-
-class BrandTextAdmin(admin.ModelAdmin):
-	model = models.BrandText
-	list_display = ('brand', 'description',)
-
-admin.site.register(models.BrandText, BrandTextAdmin)	

@@ -2,15 +2,37 @@
 {% load staticfiles %}
 
 {% block title %}
-	Products - {{ block.super }}
+	{{ brand.brand_name }} - {{ block.super }}
 {% endblock %}
 
 {% block content %}
-	<div class= "brand_descriptions">
-		{% for brand in brand_text %}
-			<p>{{ brand.description }}</p>
-		{% endfor %}
+	<div class= "brands" style="animation: fadein 1.5s 1; z-index: 999999; position: relative;">
+			<p>
+				<a class = "nav_link" href="{% url 'products' %}">Back</a>
+			</p>
 	</div>
 
-{% endblock %}
+	<div class= "brand_descriptions" style="animation: fadein 1.5s 1;">
+		<h1 style = "font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;">{{ brand.brand_name }}</h1>
+		<p>{{ brand.description }}</p>
+	</div>
 
+	<div class="container" style="position: relative; opacity: .05; margin-top: -550px; z-index: -1;">
+		<img style="width: 31%; animation: opacify 5s infinite;" 
+		src="{% static 'images/Pic1.jpg' %}"/>
+		<img style="width: 31%; animation: opacify 6s infinite;" 
+		src="{% static 'images/Pic2.jpg' %}"/>
+		<img style="width: 31%; animation: opacify 7s infinite;"
+		src="{% static 'images/Pic3.jpg' %}"/>
+		<img style="width: 29%; animation: opacify 6s infinite;" 
+		src="{% static 'images/Pic4.jpg' %}"/>
+		<img style="width: 35%; animation: opacify 5s infinite;" 
+		src="{% static 'images/Pic5.jpg' %}"/>
+		<img style="width: 29%; animation: opacify 4s infinite;" 
+		src="{% static 'images/Pic6.jpg' %}"/>
+		<img style="width: 44.5%; animation: opacify 5s infinite;" 
+		src="{% static 'images/Pic7.jpg' %}"/>
+		<img style="width: 50%; animation: opacify 6s infinite;" 
+		src="{% static 'images/Pic8.jpg' %}"/>
+	</div>	
+{% endblock %}

@@ -6,13 +6,31 @@
 {% endblock %}
 
 {% block content %}
-	<div class= "brands" style="animation: fadein 1.5s 1;">
-		{% for brand in brand_list %}
+	<div class= "brands" style="animation: fadein 1.5s 1; z-index: 999999; position: relative; padding-bottom: 0px">
+		{% for item in brand_list %}
 			<p>
-				<a class = "nav_link" href="{% url 'text' slug=brand.slug %}">{{ brand.brand_name }}</a>
+				<a class = "nav_link" style = "z-index: 100" href="{% url 'brand_text' item.slug %}">{{ item.brand_name }}</a>
 			</p>
-		{% endfor %}
+		{% endfor %}	
 	</div>
 
-{% endblock %}
+	<div class="container" style="position: relative; opacity: .05; margin-top: -908px; z-index: 0;">
+		<img style="width: 31%; animation: opacify 5s infinite;" 
+		src="{% static 'images/Pic1.jpg' %}"/>
+		<img style="width: 31%; animation: opacify 6s infinite;" 
+		src="{% static 'images/Pic2.jpg' %}"/>
+		<img style="width: 31%; animation: opacify 7s infinite;"
+		src="{% static 'images/Pic3.jpg' %}"/>
+		<img style="width: 29%; animation: opacify 6s infinite;" 
+		src="{% static 'images/Pic4.jpg' %}"/>
+		<img style="width: 35%; animation: opacify 5s infinite;" 
+		src="{% static 'images/Pic5.jpg' %}"/>
+		<img style="width: 29%; animation: opacify 4s infinite;" 
+		src="{% static 'images/Pic6.jpg' %}"/>
+		<img style="width: 44.5%; animation: opacify 5s infinite;" 
+		src="{% static 'images/Pic7.jpg' %}"/>
+		<img style="width: 50%; animation: opacify 6s infinite;" 
+		src="{% static 'images/Pic8.jpg' %}"/>
+	</div>	
 
+{% endblock %}

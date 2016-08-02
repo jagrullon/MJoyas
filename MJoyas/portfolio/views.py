@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from . import models
 
@@ -7,10 +7,10 @@ class BrandView(ListView):
 	queryset = models.Brand.objects.order_by('brand_name')
 	context_object_name = 'brand_list'
 
-def text_view(request, slug):
-	brand = models.Brand.objects.get(slug = slug)
-	brand_text = models.BrandText.objects.get(brand = brand)
-	return render(request, 'brands/brand_text.html', {'brand_text': brand_text,})	
+class TextView(DetailView):
+	template_name = 'brands/brand_text.html'	
+	context_object_name = 'brand'
+	model = models.Brand
 
 class HomeView(ListView):
 	template_name = 'home.html'

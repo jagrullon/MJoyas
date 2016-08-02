@@ -1,4 +1,5 @@
 .nav_bar {
+	display: block;
 	margin: 50px 60px 50px 50px;
 	padding: 20px 20px 20px 20px; 
 	float: right; 
@@ -10,10 +11,10 @@
 	text-decoration: none;
 	font-size: 16px;
 	color: #8c8c8c;
-	padding: 20px 20px 20px 20px;
+	padding: 20px 20px 10px 20px;
 }
 
-.nav_link:hover {
+.nav_link:hover, .nav_link:active {
 	text-decoration: none;
 	color: black;
 	animation: colorhover 1s 1;
@@ -21,7 +22,6 @@
 
 .logo {
 	display: block;
-	float: left;
 	margin: 15px 15px 15px 15px;
 	width: 25%;
 	animation: fadein 1.5s 1;
@@ -37,7 +37,7 @@
 .header {
 	text-align: right; 
 	float: right; 
-	margin: 90px 20px 0px 10px; 
+	margin: -35px 20px 0px 10px; 
 	font-size: 20px; 
 	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; 
 	color: black; 
@@ -51,6 +51,7 @@
 }
 
 .container img {
+	border-radius: 5px;
 	margin: 10px 10px 10px 10px;
 	display: inline-block;
 	max-width: 100%;
@@ -67,11 +68,10 @@
 }
 
 .brands {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	display: block;
+	text-align: left;
+	display: inline-block;
 	margin: 20px 30px 30px 30px; 
 	padding: 20px 20px 20px 20px;
-	float: left;
 	width: auto;
 	height: auto;
 	overflow: auto;
@@ -84,16 +84,17 @@
 
 .brand_descriptions {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 7px; 
 	text-align: center;
-	display: inline-block;
-	margin: 20px 30px 30px 0px;
-	padding: 20px 20px 20px 20px;
-	width: auto;
+	margin: 0px auto 80px auto;
+	padding: 30px 80px 30px 80px;
+	width: 700px;
 	height: auto;
 	overflow: auto;
 	font-size: 18px;
-	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; 
+	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
 	color: #8c8c8c;
+	background-color: white;
 }
 
 .button {

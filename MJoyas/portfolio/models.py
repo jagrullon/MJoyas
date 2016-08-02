@@ -1,5 +1,5 @@
 from django.db import models
-
+ 
 class HomeHeader(models.Model):
 	title = models.CharField(max_length = 155)
 	header = models.TextField()
@@ -9,15 +9,9 @@ class HomeHeader(models.Model):
 
 class Brand(models.Model):
 	brand_name = models.CharField(max_length = 155)
+	description = models.TextField(default = '')	
 	slug = models.SlugField(unique = True)
 
 	def __unicode__(self):
 		return self.brand_name
-
-class BrandText(models.Model):
-	brand = models.OneToOneField(Brand, on_delete = models.CASCADE, primary_key = True)
-	description = models.TextField()
-
-	def __unicode__(self):
-		return self.description
 		
